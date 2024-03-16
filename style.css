@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body{
+    background: #292929;
+    width: 520px;
+}
+
+.quote-box{
+
+    /*Background*/
+    background: #5c5c5c;
+
+    /*Box Positioning 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    */
+
+    /*Box Styling*/
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    /*box-shadow: 0rem 0rem 3rem 0.1rem hsl(172, 100%, 100%);*/
+}
+
+/*Title Text*/
+.quote-box h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+    position: relative;
+    color: #d9fcee;
+}
+
+/*Title Underline*/
+.quote-box h2::after{
+    content: '';
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*Quote Box Sizing & Styling*/
+.quote-box blockquote{
+    font-size: 25px;
+    height: 140px;
+    
+
+    color: #fff;
+}
+/*Quote Box Quotations Sizing*/
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: '"';
+}
+
+/*Author Sizing & Styling*/
+.quote-box span{
+    display: block;
+    float: right;
+    position: relative;
+
+    color: #fff;
+}
+
+/*Author Underline*/
+.quote-box span::before{
+    content: '';
+    width: 20px;
+    height: 3px;
+    background: #d9fcee;
+    border-radius: 5px;
+    
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+/*Button Sizing*/
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Button Styling */
+.quote-box button{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    background: #757575;
+    color: #d9fcee;
+    border: 1px solid #5e5d5d;
+    border-radius: 25px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quote-box button:hover{
+    background: #4b4b4b;
+    border-color: #4b4b4b;
+}
+
+.quote-box .left_arrow > i{
+    color: #d9fcee;
+    font-size:50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    position: absolute;
+    top: 20%;
+    margin-right: 400px;
+
+}
+.quote-box .left_arrow > i:hover {
+    color: #6dffc5; /* Change to desired color */
+}
+
+.quote-box .right_arrow > i{
+    color: #d9fcee;
+    font-size:50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    position: absolute;
+    top: 20%;
+    margin-left: 400px;
+
+}
+.quote-box .right_arrow > i:hover {
+    color: #6dffc5; /* Change to desired color */
+}
